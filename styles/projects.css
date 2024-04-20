@@ -3,4 +3,53 @@
     grid-template-columns: 1fr 2fr;
     column-gap: 50px;
 }
+.project-1{
+    background-color: rgb(74, 19, 146);
+    
+}
+.project-2{
+    background-color: rgb(81, 120, 147);
+   
+}
+.project-3{
+background-color: rgb(57, 155, 132);
 
+}
+.project-laravel{
+    display: contents;
+  
+}
+.project-java{
+    display:  grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 50px;
+}
+  
+.project-text-laravel{
+    text-align: center;
+    margin-top: 25px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    
+     }
+img.html {
+    width: 60%;
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+img.laravel {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+img.java {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

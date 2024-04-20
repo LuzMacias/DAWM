@@ -9,13 +9,34 @@ body{
     }  
 p{
     line-height: 2;
+    
 }
 h1,h2{
     text-align: center;
     font-size: 50px;
     margin-top: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 } 
+h3 {
+    text-align: left;
+    margin-left: 100px;
+    font-size:  50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+h4 {
+    text-align: right;
+    margin-right: 100px;
+    font-size: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+h5{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 a{
     text-decoration: none;
     color: gray;
