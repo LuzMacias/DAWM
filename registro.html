@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="barra-menu">
+            <h1>Sistema de Registro</h1>
+        <nav class="menu">
+            <a href="index.html">home</a>
+            <a href="projects.html">Projects</a>
+            <a href="article.html">Articles</a>
+            <a href="contacto.html">Contact</a>
+        </nav>
+        </div>
+    </header>
+    <main  class="container">
+        <h6>Registra un alumno nuevo</h6>
+        <div>
+
+         <div class="registro1">
+            <div>
+                <label>Nombre:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Edad:</label>
+                <input type="number">
+            </div>
+            <div>
+                <label for="Selecciona-genero">Genero: </label>
+                <select name="genero" id="Selecciona-genero">
+                    <option value=""> Selecciona un Genero
+                    </option>
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="prefieronocontestar">Prefiero no contestar</option>
+                </select>
+            </div>
+            <div>
+                <label for="Selecciona-Facultad">Facultad: </label>
+                <select name="Facultad" id="Seleciona-Facultad">
+                    <option value=""> Selecciona una Facultad
+                    </option>
+                    <option value="ingenieria">Ingenierìa</option>
+                    <option value="medicina">Medicina</option>
+                    <option value="artes">Artes</option>
+                </select>
+            </div>
+            <div>
+                <label>Correo:</label>
+                <input type="email">
+            </div>
+            <div>
+                <label>Contraseña:</label>
+                <input type="password">
+            </div>
+        </div>
+        <div>
+    
+        <h2>Calificaciones</h2>
+           </div>
+            <div class="registro2">
+             <div>
+                <label>Materia 1:</label>
+                <input type="number">
+             </div>
+             <div>
+                <label>Materia 2:</label>
+                <input type="number">
+             </div>
+             <div>
+                <label>Materia 3:</label>
+                <input type="number">
+             </div>
+           </div>
+
+         </div>
+   </main>
+
+
+</body>
+</html>

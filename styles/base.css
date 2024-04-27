@@ -9,6 +9,7 @@ body{
     }  
 p{
     line-height: 2;
+
     
 }
 h1,h2{
@@ -37,6 +38,14 @@ h5{
     margin-top: 25px;
     margin-bottom: 25px;
 }
+h6{
+    text-align: center;
+    text-decoration: underline;    
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 25px;    
+}
+
 a{
     text-decoration: none;
     color: gray;
