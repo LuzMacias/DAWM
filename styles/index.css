@@ -32,6 +32,7 @@ img.estudiante{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    span{}
 }
 .registro2{
     display: flex;

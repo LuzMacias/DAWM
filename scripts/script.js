@@ -54,6 +54,10 @@ function saludar(){
 
 function sumar(a,b){
     let total=(a+b);
+    for(let i=0;i<total;i++){
+        let j=i;
+    }
+    console.log(j);    
     return total;
 }
 function calcularTaxes(ingresos,egresos){

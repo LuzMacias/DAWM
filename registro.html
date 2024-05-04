@@ -26,15 +26,15 @@
          <div class="registro1">
             <div>
                 <label>Nombre:</label>
-                <input type="text">
+                <input type="text" id="txtNombre">
             </div>
             <div>
                 <label>Edad:</label>
-                <input type="number">
+                <input type="number" id="txtEdad">
             </div>
             <div>
                 <label for="Selecciona-genero">Genero: </label>
-                <select name="genero" id="Selecciona-genero">
+                <select name="genero" id="txtGenero">
                     <option value=""> Selecciona un Genero
                     </option>
                     <option value="femenino">Femenino</option>
@@ -44,7 +44,7 @@
             </div>
             <div>
                 <label for="Selecciona-Facultad">Facultad: </label>
-                <select name="Facultad" id="Seleciona-Facultad">
+                <select name="Facultad" id="txtFacultad">
                     <option value=""> Selecciona una Facultad
                     </option>
                     <option value="ingenieria">Ingenierìa</option>
@@ -54,13 +54,15 @@
             </div>
             <div>
                 <label>Correo:</label>
-                <input type="email">
+                <input type="email" id="txtCorreo">
             </div>
             <div>
                 <label>Contraseña:</label>
-                <input type="password">
+                <input type="password" id="txtContraseña">
             </div>
         </div>
+        
+        <button onclick="registrar()">Registrar</button>
         <div>
     
         <h2>Calificaciones</h2>
@@ -68,21 +70,21 @@
             <div class="registro2">
              <div>
                 <label>Materia 1:</label>
-                <input type="number">
+                <input type="number" id="txtMateria1">
              </div>
              <div>
                 <label>Materia 2:</label>
-                <input type="number">
+                <input type="number" id="txtMateria2">
              </div>
              <div>
                 <label>Materia 3:</label>
-                <input type="number">
+                <input type="number" id="txtMateria3">
              </div>
            </div>
 
          </div>
    </main>
 
-
+<script src="./scripts/register.js"></script>
 </body>
 </html>
