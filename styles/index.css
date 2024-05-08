@@ -28,13 +28,45 @@ img.estudiante{
 .registro1{
     margin-top: 80px;
     margin-inline-start: 50px;
-    margin-block-end: 100px;
+    margin-block-end: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    span{}
+    
+}
+.registro1 div{
+    margin-bottom: 7px;
+}
+label{
+    display: inline-block;
+    width: 100px;
+}
+input{
+    width:25%;
 }
 .registro2{
+  
+    margin-top: 20px;
+    margin-inline-start: 50px;
+    margin-block-end: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+
+}
+.registro2 div{
+    margin-bottom: 7px;
+}
+.boton {
+
+    display: block;
+    border: 1px solid black ;
+    margin-left: 50px;
+    padding: 12px;
+    width: 200px;
+    text-align:center;
+    border-radius: 15px;
+    background-color: #dab10d;
+    color: black;
+    letter-spacing: 5px;
 }

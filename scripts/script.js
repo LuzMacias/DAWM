@@ -69,5 +69,5 @@ function calcularTaxes(ingresos,egresos){
 }
 
 calcularTaxes(sumar(100,200), sumar(10,8));
-calcularTaxes(sumar(200,300),(sumar(50,30)))
+calcularTaxes(sumar(200,300),(sumar(50,30)));
  // [] {} ""
