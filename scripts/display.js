@@ -26,7 +26,8 @@ function displayTable(){
     let student=students[i];
     tabla+=`
   <table class='tabla'>
-    <tr>
+  <caption class='caption'>${student.name}</caption>
+  <tr>
     <td>Nombre:</td> 
     <td>${student.name}</td>
     </tr>
