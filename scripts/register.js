@@ -68,7 +68,7 @@ function registrar() {
     }
 }
 function init() {
-    let student1 = new Student("Samuel", 99);
+    let student1 = new Student("Samuel", 99,"Masculino","Ingenieria","sam_2@uabc.edu.mx","10",10,10,10);
     students.push(student1);
     displayCards();
     displayTable();

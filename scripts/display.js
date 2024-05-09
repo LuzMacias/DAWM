@@ -4,19 +4,18 @@ let card="";
     let student=students[i];
     card+=`
     <div class='student'>
-    <h4> Nombre: ${student.name} </h4>
+    <p> Nombre: ${student.name} </p>
     <p> Edad: ${student.age}</p>
     <p> Genero: ${student.genero}</p>
     <p> Facultad: ${student.facultad}</p>
     <p> Correo: ${student.correo}</p>
-    <p> Contraseña: ${student.contraseña}</p>
+   
     <p> Materia 1: ${student.materia1}</p>
     <p> Materia 2: ${student.materia2}</p>
     <p> Materia 3: ${student.materia3}</p>
     <button>Eliminar</button>
     </div>
     `;
-
 }
 document.getElementById("studentList").innerHTML=card;
 }
@@ -26,7 +25,7 @@ function displayTable(){
   for(let i=0;i<students.length;i++){
     let student=students[i];
     tabla+=`
-  <table>
+  <table class='student'>
     <tr>
     <td>Nombre:</td> 
     <td>${student.name}</td>
@@ -46,12 +45,7 @@ function displayTable(){
     <tr>
     <td>Correo:</td> 
     <td>${student.correo}</td>
-    </tr>
-    <tr>
-    <td>Contraseña:</td> 
-    <td>${student.contraseña}</td>
-    </tr>
-    <tr>
+    </tr>    <tr>
     <td>Materia 1:</td> 
     <td>${student.materia1}</td>
     </tr>
@@ -67,5 +61,5 @@ function displayTable(){
     `;
   }
 
-  document.getElementById("studentTable").innerTHML=tabla;
+  document.getElementById("studentTable").innerHTML=tabla; 
   } 

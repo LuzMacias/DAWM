@@ -9,8 +9,9 @@ body{
     }  
 p{
     line-height: 2;
-
-    
+}
+tr{
+    line-height: 2;
 }
 h1,h2{
     text-align: center;
