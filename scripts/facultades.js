@@ -22,7 +22,7 @@ function register(){
     let inputCampus = document.getElementById("txtCampus").value;    
 
     let nuevaFacultad = new Facultades(inputName,inputCampus);
-    console.log(nuevaFacultad);
+    saveItems(nuevaFacultad); // esta funcion esta en StoreManager
 if(isValid(nuevaFacultad)){
    
 }
