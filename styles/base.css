@@ -9,6 +9,7 @@ body{
     }  
 p{
     line-height: 2;
+    text-align: center;
 }
 tr{
     line-height: 2;
@@ -42,7 +43,7 @@ h5{
 h6{
     text-align: center;
     text-decoration: underline;   
-    text-decoration-color: #ffcc00; 
+    text-decoration-color: #45d316; 
     font-size: 50px;
     margin-top: 50px;
     margin-bottom: 25px;    
@@ -51,7 +52,7 @@ h7{
     text-align: left;
     margin-left: 50px;
     text-decoration: underline;   
-    text-decoration-color: #ffcc00; 
+    text-decoration-color: #45d316; 
     font-size: 25px;
     margin-top: 50px;
       
@@ -78,7 +79,7 @@ img{
     width: 150px;
     text-align: center;
     border-radius: 20px;
-    background-color: #dab10d;
+    background-color: #45d316;
     color: black;
     text-transform: uppercase;
     font-size: 12px;
@@ -93,7 +94,7 @@ img{
     width: 100px;
     text-align: center;
     border-radius: 20px;
-    background-color: #dab10d;
+    background-color: #45d316;
     color: black;
     text-transform: uppercase;
     font-size: 10px;

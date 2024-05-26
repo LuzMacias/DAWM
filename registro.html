@@ -8,6 +8,25 @@
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/display.css">
     <title>Document</title>
+    <style>
+    #txtGenero,
+    #txtNombre,
+    #txtEdad,
+    #txtCorreo,
+    #txtContraseña {
+        width: 297px;
+    }
+</style>
+    <style>
+    #txtGenero,
+    #txtMateria1,
+    #txtMateria2,
+    #txtMateria3,
+    #txtFacultad {
+        width: 300px;
+    }
+</style>
+</style>
 </head>
 
 <body>
@@ -15,15 +34,15 @@
         <div class="barra-menu">
             <h1>Sistema de Registro</h1>
             <nav class="menu">
-                <a href="index.html">home</a>
-                <a href="projects.html">Projects</a>
-                <a href="article.html">Articles</a>
-                <a href="contacto.html">Contact</a>
+                <a href="index.html">Inicio</a>
+                <a href="registro.html">Registrate Ahora</a>
+                <a href="usuarios.html">Estudiantes Registrados</a>
+                <a href="projects.html">Projects</a>    
             </nav>
         </div>
     </header>
     <main class="container">
-        <h6>Registra un alumno nuevo</h6>
+        <h6>Registrate Ahora</h6>
         <div>
 
             <div class="registro1">
@@ -68,33 +87,55 @@
                 </div>
             </div>
         </div>
-        <h7>Calificaciones</h7>
+        <h7>Materias 2024-2</h7>
 
         <div class="registro2">
             <div>
-                <label>Materia 1:</label>
-                <input type="number" id="txtMateria1">
+                <label>FIREWALL:</label>
+
+                <select name="materia1" id="txtMateria1">
+
+                    <option value=""> Selecciona SI o NO
+                    </option>
+                    <option value="si">SI</option>
+                    <option value="no">NO</option>
+      
+                </select>
+                
             </div>
             <div>
-                <label>Materia 2:</label>
-                <input type="number" id="txtMateria2">
+                <label>EDR:</label>
+
+                <select name="materia2" id="txtMateria2">
+
+                    <option value=""> Selecciona SI o NO
+                    </option>
+                    <option value="si">SI</option>
+                    <option value="no">NO</option>
+      
+                </select>
             </div>
             <div>
-                <label>Materia 3:</label>
-                <input type="number" id="txtMateria3">
+                <label>DDoS:</label>
+
+                <select name="materia3" id="txtMateria3">
+
+                    <option value=""> Selecciona SI o NO
+                    </option>
+                    <option value="si">SI</option>
+                    <option value="no">NO</option>
+      
+                </select>
             </div>
         </div>
         <button class="boton" onclick="registrar()">Registrar</button>
-         <h6>Estudiantes registrados </h6>
+      
       <div id="studentList"></div>
         
     </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./scripts/register.js"></script>
-    <script src="./scripts/display.js"></script>
-
-
 
 </body>
 

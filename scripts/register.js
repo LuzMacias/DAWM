@@ -76,6 +76,7 @@ function registrar() {
 //        students.push(nuevoAlumno);
     //    console.log(students);
         insertToDataBase(nuevoAlumno);
+        alert("Felicades has sido registrado");
         //displayCards();
         //displayTable();
     }

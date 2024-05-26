@@ -16,7 +16,7 @@
     margin-right: 20px;
 }
 .menu a:hover{
-    color: #ffcc00;
+    color: #45d316;
     text-decoration: underline;
 }
 img.estudiante{
@@ -32,6 +32,7 @@ img.estudiante{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  
     
 }
 .registro1 div{
@@ -66,7 +67,7 @@ input{
     width: 200px;
     text-align:center;
     border-radius: 15px;
-    background-color: #dab10d;
+    background-color: #45d316;
     color: black;
     letter-spacing: 5px;
 }
