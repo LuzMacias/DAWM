@@ -100,3 +100,34 @@ img{
     font-size: 10px;
     letter-spacing: 1px;
 }
+
+.container2{
+    max-width:800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h8 {
+    text-align: center;
+}
+
+table {
+width: 100%;
+border-collapse:  collapse;
+margin-top: 20px;
+
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #45d316;
+}
+
+th {
+    background-color: #45d316;
+}
+
+tr:hover {
+    background-color: #6bb36b;
+}

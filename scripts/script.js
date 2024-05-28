@@ -47,7 +47,7 @@ let student5 = new Student ("Fernanda",97,true);
 console.log(student3,student4,student5);
 
 //funtion
-
+/*
 function saludar(){
     alert("Welcome");
 }
@@ -57,7 +57,6 @@ function sumar(a,b){
     for(let i=0;i<total;i++){
         let j=i;
     }
-    console.log(j);    
     return total;
 }
 function calcularTaxes(ingresos,egresos){
@@ -70,4 +69,4 @@ function calcularTaxes(ingresos,egresos){
 
 calcularTaxes(sumar(100,200), sumar(10,8));
 calcularTaxes(sumar(200,300),(sumar(50,30)));
- // [] {} ""
+ // [] {} ""*/

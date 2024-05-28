@@ -153,7 +153,7 @@ function displayTableBody(student){
       <td>${student.name}</td>
       <td>${student.age}</td>
       <td>${student.genero}</td>
-      <td>${student.email}</td>
+      <td>${student.correo}</td>
       <td>${student.facultad}</td>
       <td>${student.materia1}</td>
       <td>${student.materia2}</td>
