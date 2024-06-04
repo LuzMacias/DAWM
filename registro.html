@@ -10,24 +10,60 @@
     
     <title>Document</title>
     <style>
-    #txtGenero,
-    #txtNombre,
-    #txtEdad,
-    #txtCorreo,
-    #txtContraseña {
-        width: 297px;
-    }
-</style>
-    <style>
-    #txtGenero,
-    #txtMateria1,
-    #txtMateria2,
-    #txtMateria3,
-    #txtFacultad {
-        width: 300px;
-    }
-</style>
-</style>
+        #txtGenero,
+        #txtNombre,
+        #txtEdad,
+        #txtCorreo,
+        #txtContraseña {
+            width: 297px;
+        }
+
+        #txtGenero,
+        #txtMateria1,
+        #txtMateria2,
+        #txtMateria3,
+        #txtFacultad {
+            width: 300px;
+        }
+
+        .input-group {
+            display: contents;
+            align-items: center;
+        }
+
+        .input-group input {
+            flex: 1;
+            width: 260px;
+        }
+
+        .input-group button {
+            margin-left: 10px;
+            padding: 5px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 150px;
+        }
+
+        .input-group button:hover {
+            background-color: hsl(133, 61%, 33%);
+        }
+
+        .boton {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .boton:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 
 <body>
@@ -36,18 +72,16 @@
             <h1>Sistema de Registro</h1>
             <nav class="menu">
                 <a href="index.html">Inicio</a>
-                <a href="registro.html">Registrate Ahora</a>
+                <a href="registro.html">Regístrate Ahora</a>
                 <a href="usuarios.html">Estudiantes Registrados</a>
                 <a href="facultades.html">Registro Facultades</a>
                 <a href="projects.html">Projects</a>  
-                  
             </nav>
         </div>
     </header>
     <main class="container">
-        <h6>Registrate Ahora</h6>
+        <h6>Regístrate Ahora</h6>
         <div>
-
             <div class="registro1">
                 <div>
                     <label>Nombre:</label>
@@ -58,10 +92,9 @@
                     <input type="number" id="txtEdad">
                 </div>
                 <div>
-                    <label>Genero: </label>
+                    <label>Género: </label>
                     <select name="genero" id="txtGenero">
-                        <option value=""> Selecciona un Genero
-                        </option>
+                        <option value="">Selecciona un Género</option>
                         <option value="femenino">Femenino</option>
                         <option value="masculino">Masculino</option>
                         <option value="prefieronocontestar">Prefiero no contestar</option>
@@ -69,16 +102,16 @@
                 </div>
                 <div>
                     <label>Facultad: </label>
-
                     <select name="Facultad" id="txtFacultad">
-
-                        <option value=""> Selecciona una Facultad
-                        </option>
-                        <option value="ingenieria">Ingenierìa</option>
+                        <option value="">Selecciona una Facultad</option>
+                        <option value="ingenieria">Ingeniería</option>
                         <option value="medicina">Medicina</option>
                         <option value="artes">Artes</option>
-
                     </select>
+
+                    <div class="input-group">
+                        <a href="facultades.html"><button type="button">Agregar Facultad</button></a>
+                    </div>
                 </div>
                 <div>
                     <label>Correo:</label>
@@ -86,60 +119,84 @@
                 </div>
                 <div>
                     <label>Contraseña:</label>
-                    <input type="password" id="txtContraseña">
+                    <div class="input-group">
+                        <input type="password" id="txtContraseña">
+                        <button type="button" onclick="togglePassword()">Mostrar</button>
+                    </div>
                 </div>
             </div>
         </div>
         <h7>Materias 2024-2</h7>
-
         <div class="registro2">
             <div>
                 <label>FIREWALL:</label>
-
                 <select name="materia1" id="txtMateria1">
-
-                    <option value=""> Selecciona SI o NO
-                    </option>
+                    <option value="">Selecciona SI o NO</option>
                     <option value="si">SI</option>
                     <option value="no">NO</option>
-      
                 </select>
-                
             </div>
             <div>
                 <label>EDR:</label>
-
                 <select name="materia2" id="txtMateria2">
-
-                    <option value=""> Selecciona SI o NO
-                    </option>
+                    <option value="">Selecciona SI o NO</option>
                     <option value="si">SI</option>
                     <option value="no">NO</option>
-      
                 </select>
             </div>
             <div>
                 <label>DDoS:</label>
-
                 <select name="materia3" id="txtMateria3">
-
-                    <option value=""> Selecciona SI o NO
-                    </option>
+                    <option value="">Selecciona SI o NO</option>
                     <option value="si">SI</option>
                     <option value="no">NO</option>
-      
                 </select>
             </div>
+            <br><br>
+            <div class="input-group">
+                <button onclick="registrar()">Registrar</button>
+            </div>
         </div>
-        <button class="boton" onclick="registrar()">Registrar</button>
-      
-      <div id="studentList"></div>
-        
+        <div id="studentList"></div>
     </main>
-
+    
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./scripts/register.js"></script>
 
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById('txtContraseña');
+            const type = passwordField.type === 'password' ? 'text' : 'password';
+            passwordField.type = type;
+            const button = event.target;
+            button.textContent = type === 'password' ? 'Mostrar' : 'Ocultar';
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            updateFacultadesList();
+        });
+
+        function updateFacultadesList() {
+            $.ajax({
+                url: "./app/rfacultades.php",
+                method: "GET",
+                dataType: "json",
+                success: function(response) {
+                    let selectFacultades = document.getElementById("txtFacultad");
+                    selectFacultades.innerHTML = '<option value="">Selecciona una Facultad</option>';
+                    response.forEach(facultad => {
+                        let option = document.createElement("option");
+                        option.text = facultad.name;
+                        option.value = facultad.name;
+                        selectFacultades.appendChild(option);
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.log("Error de conexión");
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -1,33 +1,68 @@
-
-//constructor
-function Facultades(name,campus){
-    this.name=name;
-    this.campus=campus;
+// Constructor
+function Facultad(name, campus) {
+    this.name = name;
+    this.campus = campus;
 }
 
-//valudacion
-function isValid(unAlumno){
-    let validacion = true;
-    if(unAlumno.name==""){
-        validacion = false;
-    }
-    if(unAlumno.campus==""){
-        validacion = false;
-    }
-    return validacion;
+// Validación
+function isValid(unFacultad) {
+    return unFacultad.name && unFacultad.campus;
 }
-//register
-function register(){
+
+// Registrar
+function registerFacultad() {
     let inputName = document.getElementById("txtFacultad").value;
-    let inputCampus = document.getElementById("txtCampus").value;    
+    let inputCampus = document.getElementById("txtCampus").value;
 
-    let nuevaFacultad = new Facultades(inputName,inputCampus);
-    saveItems(nuevaFacultad); // esta funcion esta en StoreManager
-if(isValid(nuevaFacultad)){
+    let nuevaFacultad = new Facultad(inputName, inputCampus);
     
-    alert("Gracias por ingresar una facultad");
+    if (isValid(nuevaFacultad)) {
+        saveFacultadToDatabase(nuevaFacultad);
+    } else {
+        alert("Por favor, completa todos los campos.");
+    }
 }
-else{
-  alert("Por favor de ingresar la informaciòn");
+
+function saveFacultadToDatabase(facultad) {
+    $.ajax({
+        url: "./app/rfacultades.php",
+        method: "POST",
+        data: {
+            name: facultad.name,
+            campus: facultad.campus
+        },
+        dataType: "json",
+        success: function(response) {
+            if (response.success) {
+                alert("Gracias por ingresar una facultad");
+                updateFacultadesList();
+            } else {
+                console.log("Error, por favor intente de nuevo");
+            }
+        },
+        error: function(xhr, status, error) {
+            console.log("Error de conexión");
+        }
+    });
 }
+
+function updateFacultadesList() {
+    $.ajax({
+        url: "./app/rfacultades.php",
+        method: "GET",
+        dataType: "json",
+        success: function(response) {
+            let selectFacultades = document.getElementById("txtFacultad");
+            selectFacultades.innerHTML = '<option value="">Selecciona una Facultad</option>';
+            response.forEach(facultad => {
+                let option = document.createElement("option");
+                option.text = facultad.name;
+                option.value = facultad.name;
+                selectFacultades.appendChild(option);
+            });
+        },
+        error: function(xhr, status, error) {
+            console.log("Error de conexión");
+        }
+    });
 }
